@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<>
+	<head>
+		<meta charset="utf-8">
+		<title>Register</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body>
+    <center>
+		<div class="register1">
+			<h1>Register</h1>
+			<div class="links">
+				<a href="{{ url_for('login') }}">Login</a>
+				<a href="{{ url_for('register') }}" class="active">Register</a>
+			</div>
+			<form action="{{ url_for('register') }}" method="post" autocomplete="off">
+                <p>Enter your First Name</p><br>
+				<label for="fname">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="fname" placeholder="First name" id="fname" required>
+                <p>Enter your Last Name</p>
+                <label for="lname">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="lname" placeholder="Last name" id="lname" required>
+                 <p>Enter your Date of Birth</p>
+                <label for="dob">
+					<i class="fas fa-calender"></i>
+				</label>
+				<input type="text" name="dob" placeholder="DD/MM/YYYY" id="dob" required>
+                <p>Enter your Address</p>
+                 <label for="address">
+					<i class="fas fa-address-card"></i>
+				</label>
+				<input type="textarea" name="address" placeholder="Address" id="address" required>
+                <p>Enter your Contact Number</p>
+                 <label for="contact">
+					<i class="fas fa-mobile"></i>
+				</label>
+				<input type="text" name="contact" placeholder="Contact Number" id="contact" required>
+                <p>Enter your email id</p>
+
+				<label for="email">
+					<i class="fas fa-envelope"></i>
+				</label>
+				<input type="email" name="email" placeholder="Email" id="email" required>
+                <p>Enter your qualification</p>
+                <label for="qualification">
+					<i class="fas fa-book"></i>
+				</label>
+				<input type="text" name="qualification" placeholder="Qualification" id="qualification" required>
+                 <p>Gender</p>
+
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+                <input type="radio" id="other" name="gender" value="other">
+               <label for="other">Other</label>
+                <p>Salary per month</p>
+
+				<input type="text" name="salary" placeholder="Salary per month" id="salary" required>
+                   <p>PAN Card Number</p>
+
+				<input type="text" name="pan" placeholder="PAN Card Number" id="pan" required>
+                 <p>Employer Type</p>
+                 <input type="radio" id="self-employed" name="employer-type" value="self-employed">
+                 <label for="self-employed">Self-Employed</label><br>
+                 <input type="radio" id="salaried" name="employer-type" value="salaried">
+                 <label for="salaried">Salaried</label><br>
+
+                <p>Employer</p>
+				<input type="text" name="employer" placeholder="Name of the employer if salaried" id="employer" optional>
+
+				# <div class="msg">{{ msg }}</div>
+				<input type="submit" value="Register">
+			</form>
+		</div>
+	</body>
+</center>
+</html>
